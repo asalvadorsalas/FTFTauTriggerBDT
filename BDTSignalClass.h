@@ -183,7 +183,7 @@ void BDTSignalClass::Init(TTree *tree)
    fChain->SetMakeClass(1);
 
    fChain->SetBranchAddress("EventNumber", &EventNumber, &b_EventNumber);
-   fChain->SetBranchAddress("passL1_Tau12IM", &passL1_Tau12IM, &b_passL1_Tau12IM);
+   fChain->SetBranchAddress("passL1_TAU12IM", &passL1_Tau12IM, &b_passL1_Tau12IM);
 
    fChain->SetBranchAddress("Coretrack_pt", &Coretrack_pt, &b_Coretrack_pt);
    fChain->SetBranchAddress("Coretrack_eta", &Coretrack_eta, &b_Coretrack_eta);

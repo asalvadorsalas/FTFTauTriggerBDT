@@ -13,7 +13,6 @@ BDTSignalClass::BDTSignalClass(const char* inputfile, const char* outputfile) : 
   f->GetObject("tree_vec",tree);
   
   Init(tree);
-  //hfile= new TFile(outputfile,"Recreate","TriggerAnalysis_output");
 }
 
 BDTSignalClass::~BDTSignalClass()
