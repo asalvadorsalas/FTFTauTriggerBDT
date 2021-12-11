@@ -217,6 +217,10 @@ for (Long64_t jentry=0; jentry<nentries;jentry++) { //progress bar
         ClassTrack target1stg_minDR;
         for( unsigned int iTrk = 0; iTrk < Coretrack_pt->size(); ++iTrk ){
 
+	  if (iTrk!=0 && Coretrack_pt->at(0)==Coretrack_pt->at(iTrk)){
+	    //std::cout << iTrk << " is a clone track!" << std::endl;
+	    break;
+	  }
           TLorentzVector tmp1stgtrk;
           tmp1stgtrk.SetPtEtaPhiM(Coretrack_pt->at(iTrk)*0.001,
           Coretrack_eta->at(iTrk),
@@ -272,6 +276,10 @@ for (Long64_t jentry=0; jentry<nentries;jentry++) { //progress bar
                 //inints
                 float minDR = 9999;
                 for(unsigned int iTrk =0; iTrk < Coretrack_pt->size(); ++iTrk){
+		  if (iTrk!=0 && Coretrack_pt->at(0)==Coretrack_pt->at(iTrk)){
+		    //std::cout << iTrk << " is a clone track!" << std::endl;
+		    break;
+		  }
                 TLorentzVector tmp1stgtrk;
                 tmp1stgtrk.SetPtEtaPhiM(Coretrack_pt->at(iTrk)*0.001,
                 Coretrack_eta->at(iTrk),
